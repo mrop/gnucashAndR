@@ -13,7 +13,7 @@ library(gridExtra)
 library(tidyr)
 library(sys)
 
-mydb = dbConnect(MySQL(), user='root', password='supersecret', dbname='gnucash', host='127.0.0.1')
+mydb = dbConnect(MySQL(), user='user', password='supersecret', dbname='gnucash', host='127.0.0.1')
 
 assetsResultSet = dbSendQuery(mydb,"select post_date, account_type as type, splits.value_num/100 as amount  FROM accounts
 inner JOIN splits ON accounts.guid=splits.account_guid
