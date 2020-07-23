@@ -40,7 +40,7 @@ ggplot() +
     xlab('date') +  ylab('amount') 
 
 
-ggsave(paste("/Users/mrop/Documents/Code/local/gnucashReports/",format(Sys.Date(), "%Y%m%d"), "assetsLiabilities.pdf",sep=""))
+ggsave(paste(format(Sys.Date(), "%Y%m%d"), "assetsLiabilities.pdf",sep=""))
 
 lapply( dbListConnections( dbDriver( drv = "MySQL")), dbDisconnect)
 
